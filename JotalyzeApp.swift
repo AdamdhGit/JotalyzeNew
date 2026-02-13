@@ -15,6 +15,7 @@ struct JotalyzeApp: App {
     @StateObject var journalLock = JournalLock()
     @StateObject var loadCoreData = LoadCoreData()
     @StateObject var startupTutorialDone = StartupTutorialDone()
+    @State var journalManager = JournalManager.shared
     
     var body: some Scene {
         WindowGroup {
@@ -26,6 +27,11 @@ struct JotalyzeApp: App {
                     .environmentObject(StartupTutorialDone())
                     .environmentObject(journalLock)
                     .environment(\.managedObjectContext, loadCoreData.container.viewContext)
+                    .onAppear {
+                        Task {
+                            await journalManager.refreshEntries()
+                        }
+                    }
             }
             }
   

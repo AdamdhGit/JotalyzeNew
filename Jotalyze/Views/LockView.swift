@@ -17,13 +17,37 @@ struct LockView: View {
     @State var showErrorText = false
     @State var showAuthenticationButton = false
     
+    @State var journalManager = JournalManager.shared
+    
     var body: some View {
         
         VStack {
             
             if showContentView || !journalLock.isLocked || (journalLock.isLocked && journalLock.justSet) {
                 //successfully unlocked, or unlocked, show content view
-                HomeView()
+                if !journalManager.isLoadingEntries && !journalManager.isLoadingImages {
+                    HomeView()
+                } else {
+                    VStack {
+                        Image(colorScheme == .dark ? "appIconImageWhite" : "appIconImage") // Your logo
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                    Text("Jotalyze")
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                        
+                        Spacer()
+                    }.padding(.top, 250)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color(.systemBackground))
+                                .onAppear {
+                                    // Load entries while splash shows
+                                    Task {
+                                        await journalManager.refreshEntries()
+                                    }
+                                }
+                }
             } else {
                 //hasn't been unlocked but required to unlock
                 

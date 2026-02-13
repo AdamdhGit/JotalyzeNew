@@ -18,20 +18,33 @@ struct JournalThumbnailView: View {
     let entry: JournalEntry
     @State private var image: UIImage?
     @State private var isLoading = true
+    /*
+        .frame(maxHeight: 300)
+        .padding(.trailing, 40)
+        .padding(.vertical)
+    */
 
     var body: some View {
         Group {
+            
             if isLoading {
-                ProgressView()
-            } else if let image = image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-            } else {
-                Text("No Image")
-                    .foregroundColor(.gray)
-            }
+                    ProgressView()
+                } else if let image = image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                } else {
+                    // small placeholder
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(.gray)
+                        .opacity(0.5)
+                }
+            
+            
         }
         .onAppear {
             loadThumbnail()
@@ -74,11 +87,20 @@ struct JournalThumbnailView: View {
         }
 
         // 3️⃣ Show placeholder immediately while disk image loads
-        self.image = UIImage(systemName: "photo")
+        //self.image = UIImage(systemName: "photo")
         self.isLoading = false
 
+        
+        JournalManager.shared.loadingImageCount += 1
         // 4️⃣ Load disk image in background
         DispatchQueue.global(qos: .userInitiated).async {
+            
+            defer {
+                    DispatchQueue.main.async {
+                        JournalManager.shared.loadingImageCount -= 1
+                    }
+                }
+            
             guard let fileURL = JournalManager.shared.getImageURL(from: entry.thumbnailPath ?? entry.imagePath) else {
                 return
             }
@@ -98,6 +120,8 @@ struct JournalThumbnailView: View {
                 DispatchQueue.main.async {
                     self.image = loadedImage
                 }
+                
+              
             }
         }
     }

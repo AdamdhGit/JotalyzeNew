@@ -12,7 +12,14 @@ import UIKit
     static let shared = JournalManager()
     //shares the journalManager class itself to access anywhere but the var below is still the data being used and can be published since its a @Observable class.
     
+    var loadingImageCount = 0
+    var isLoadingImages: Bool {
+        loadingImageCount > 0
+    }
+    
     var journalEntries = [JournalEntry]()
+    
+    var isLoadingEntries: Bool = true
     
     func imagesDirectory() -> URL {
         let documentsDirectory = getDocumentsDirectory()
@@ -104,6 +111,7 @@ import UIKit
             
             await MainActor.run {
                 self.journalEntries = entries
+                self.isLoadingEntries = false
             }
             
         } catch {

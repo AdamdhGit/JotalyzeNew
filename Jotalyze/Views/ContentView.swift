@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isLoading = true
+    //@State private var isLoading = true
     
     @Environment(\.colorScheme) var colorScheme
     @State var journalManager:JournalManager
@@ -47,9 +47,12 @@ struct ContentView: View {
                         
                         
                         //entries
+                        /*
                         if isLoading {
                             ProgressView("Loading...")
-                        } else if journalManager.journalEntries.isEmpty {
+                        } else
+                        */
+                        if journalManager.journalEntries.isEmpty {
                             emptyJournalView
                         } else {
                             
@@ -327,8 +330,10 @@ struct ContentView: View {
             }
             .onAppear {
                 Task{
-                    await journalManager.refreshEntries()
-                    isLoading = false
+                    //await journalManager.refreshEntries()
+                    //moved to @main for the entries call onAppear
+                    
+                    //isLoading = false
                 }
                 //journalManager.getAllJournalEntries()
                 
