@@ -21,4 +21,7 @@ struct JournalEntry: Codable, Equatable, Identifiable {
     var progressLogged:Double?
     var imageData:String?
     
+    var imagePath: String?
+    var thumbnailPath: String?
+    
 }

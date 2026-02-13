@@ -318,7 +318,7 @@ struct DisplayedEntriesView: View {
                                         HStack{
                                             
                                             HStack{
-                                                Text("📈").font(.subheadline).opacity(0.9)
+                                                Text("📈").font(.subheadline).opacity(0.5)
                                                 
                                                 Text("progress").font(.title3).foregroundStyle(.mint).fontWeight(.light).opacity(0.9)
                                             }.padding(9).overlay {
@@ -339,10 +339,7 @@ struct DisplayedEntriesView: View {
                                     
                                     HStack{
                                         
-                                        Image(uiImage:loadImage(from: journalEntry) ?? UIImage())
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                                        JournalThumbnailView(entry: journalEntry)
                                             .frame(maxHeight: 300)
                                             .padding(.trailing, 40)
                                             .padding(.vertical)
@@ -527,14 +524,6 @@ struct DisplayedEntriesView: View {
         }
         
         return ""
-    }
-    
-    func loadImage(from entry: JournalEntry) -> UIImage? {
-        guard let imageDataString = entry.imageData,
-              let imageData = Data(base64Encoded: imageDataString) else {
-            return nil
-        }
-        return UIImage(data: imageData)
     }
     
     var darkGrayColor: Color {

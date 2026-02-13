@@ -28,7 +28,8 @@ struct HomeView: View {
     @State var goalTrackingEntrySelected = false
     @State var captureTheMomentSelected = false
     
-    @State var journalManager = JournalManager()
+    //@State var journalManager = JournalManager()
+    @State var journalManager = JournalManager.shared
     
     @State var goalManager = GoalManager()
     

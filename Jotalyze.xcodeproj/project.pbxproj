@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664D91402F3F9853001BC0B9 /* JournalThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D913F2F3F9853001BC0B9 /* JournalThumbnailView.swift */; };
 		66BD706F2F3151810090D50A /* HabitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD706E2F3151810090D50A /* HabitRowView.swift */; };
 		BA0579DA2D94664C00D028ED /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA0579D82D94664C00D028ED /* CoreData.xcdatamodeld */; };
 		BA0579DC2D94670A00D028ED /* LoadCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0579DB2D94670A00D028ED /* LoadCoreData.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		664D913F2F3F9853001BC0B9 /* JournalThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalThumbnailView.swift; sourceTree = "<group>"; };
 		66BD706E2F3151810090D50A /* HabitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRowView.swift; sourceTree = "<group>"; };
 		BA0579D92D94664C00D028ED /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		BA0579DB2D94670A00D028ED /* LoadCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCoreData.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				BA0579E12D946CF500D028ED /* AddNewDailyCheckoffItemView.swift */,
 				BA81F6782D8E6DAC005B4048 /* TestNewViews.swift */,
 				BAC126202D440B7F001354DB /* DisplayedEntriesView.swift */,
+				664D913F2F3F9853001BC0B9 /* JournalThumbnailView.swift */,
 				BA8F1AF82CBB3B2100BBF210 /* InsightsSheetView.swift */,
 				BA8F1AEF2CBAF4DE00BBF210 /* JournalEditView.swift */,
 			);
@@ -289,6 +292,7 @@
 				BA0579E22D946CF500D028ED /* AddNewDailyCheckoffItemView.swift in Sources */,
 				BA0579DC2D94670A00D028ED /* LoadCoreData.swift in Sources */,
 				BA87C0F22D95965100BF7EDA /* EveningReflectionView.swift in Sources */,
+				664D91402F3F9853001BC0B9 /* JournalThumbnailView.swift in Sources */,
 				BA0BD72D2D9CBD640093F43B /* startupTutorialDone.swift in Sources */,
 				BA2197BC2D6A47B5006550B7 /* MoodCheckInView.swift in Sources */,
 				BA8F1AF72CBB09DB00BBF210 /* LockView.swift in Sources */,

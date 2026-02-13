@@ -52,9 +52,11 @@ struct CaptureTheMomentView: View {
                     
                     if attachedPhoto != nil || capturedImage != nil{
                         Button{
-                            
-                            savePictureEntry()
-                            dismiss()
+                           
+                            Task {
+                                    await savePictureEntryAsync()
+                                    dismiss()
+                                }
 
                             if journalManager.journalEntries.count == 5 || journalManager.journalEntries.count == 20 || journalManager.journalEntries.count == 50 || journalManager.journalEntries.count == 75 ||
                                 journalManager.journalEntries.count == 100 {
@@ -66,8 +68,7 @@ struct CaptureTheMomentView: View {
                             
                             
                         }label:{
-                            Text("Save")
-                            
+                                   Text("Save")
                         }.disabled(momentEntryText.isEmpty).tint(colorScheme == .light ? .black : .white)
                     }
                     
@@ -215,28 +216,39 @@ struct CaptureTheMomentView: View {
         Color.gray.opacity(0.1)
     }
     
-    func savePictureEntry() {
-        if capturedImage != nil {
-            let imageBase64String = capturedImage?.pngData()?.base64EncodedString()
-            
-            
-            let newEntry = JournalEntry(id: UUID(), mood: "", title: "", entry: momentEntryText, date: Date.now, entryType: "Photo", imageData: imageBase64String)
-            
-            
-            journalManager.saveJournalEntry(newEntry)
+    func savePictureEntryAsync() async {
+        // Capture the current state safely
+        let image = capturedImage ?? attachedPhoto
+        let text = momentEntryText
 
-        } else if attachedPhoto != nil {
-            let imageBase64String = attachedPhoto?.pngData()?.base64EncodedString()
-            
-            
-            let newEntry = JournalEntry(id: UUID(), mood: "", title: "", entry: momentEntryText, date: Date.now, entryType: "Photo", imageData: imageBase64String)
-            
-            
-            journalManager.saveJournalEntry(newEntry)
+        guard let image else { return }
 
+        let imagesDir = JournalManager.shared.imagesDirectory()
+        let fileURL = imagesDir.appendingPathComponent("\(UUID()).png")
+
+        if let pngData = image.pngData() {
+            try? pngData.write(to: fileURL, options: .completeFileProtection)
+
+            let newEntry = JournalEntry(
+                id: UUID(),
+                mood: "",
+                title: "",
+                entry: text,
+                date: Date.now,
+                entryType: "Photo",
+                imageData: nil,
+                thumbnailPath: fileURL.lastPathComponent
+            )
+            
+            // ✅ Add to in-memory cache immediately to avoid placeholder flicker
+            ImageCache.shared.cache.setObject(image, forKey: newEntry.id.uuidString as NSString)
+
+            // Save and refresh on main actor
+            await MainActor.run {
+                JournalManager.shared.saveJournalEntry(newEntry)
+                JournalManager.shared.getAllJournalEntries()
+            }
         }
-        
-        journalManager.getAllJournalEntries()
     }
     
     var darkGrayColor: Color {
