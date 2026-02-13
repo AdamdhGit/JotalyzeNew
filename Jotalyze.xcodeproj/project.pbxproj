@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66BD706F2F3151810090D50A /* HabitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BD706E2F3151810090D50A /* HabitRowView.swift */; };
+		BA0579DA2D94664C00D028ED /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA0579D82D94664C00D028ED /* CoreData.xcdatamodeld */; };
+		BA0579DC2D94670A00D028ED /* LoadCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0579DB2D94670A00D028ED /* LoadCoreData.swift */; };
+		BA0579E22D946CF500D028ED /* AddNewDailyCheckoffItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0579E12D946CF500D028ED /* AddNewDailyCheckoffItemView.swift */; };
+		BA0BD72A2D9C83C40093F43B /* StartupTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0BD7292D9C83C40093F43B /* StartupTutorialView.swift */; };
+		BA0BD72D2D9CBD640093F43B /* startupTutorialDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0BD72C2D9CBD640093F43B /* startupTutorialDone.swift */; };
+		BA0BFCD22D96F97A0046B7BF /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0BFCD12D96F97A0046B7BF /* LocalNotificationsView.swift */; };
+		BA16DB592CBA3C3B009B023B /* Celinea-nRGpO.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA16DB582CBA3C3B009B023B /* Celinea-nRGpO.otf */; };
+		BA2197B22D6911DF006550B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2197B12D6911DF006550B7 /* HomeView.swift */; };
+		BA2197B42D694E1F006550B7 /* PickEntryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2197B32D694E1F006550B7 /* PickEntryTypeView.swift */; };
+		BA2197BC2D6A47B5006550B7 /* MoodCheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2197BB2D6A47B5006550B7 /* MoodCheckInView.swift */; };
+		BA2197BE2D6A625C006550B7 /* GratitudeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2197BD2D6A625C006550B7 /* GratitudeEntryView.swift */; };
+		BA2197C02D6A6518006550B7 /* GoalTrackingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2197BF2D6A6518006550B7 /* GoalTrackingEntryView.swift */; };
+		BA30F7AB2D938CA300BF4F4E /* DailiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA30F7AA2D938CA300BF4F4E /* DailiesView.swift */; };
+		BA6E6B3F2CB9B28A007C0EFF /* JotalyzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E6B3E2CB9B28A007C0EFF /* JotalyzeApp.swift */; };
+		BA6E6B432CB9B28D007C0EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6E6B422CB9B28D007C0EFF /* Assets.xcassets */; };
+		BA6E6B462CB9B28D007C0EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6E6B452CB9B28D007C0EFF /* Preview Assets.xcassets */; };
+		BA6E6B4F2CB9DBD3007C0EFF /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E6B4E2CB9DBD3007C0EFF /* JournalEntry.swift */; };
+		BA81F6792D8E6DAC005B4048 /* TestNewViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81F6782D8E6DAC005B4048 /* TestNewViews.swift */; };
+		BA87C0F02D95946900BF7EDA /* MorningPreparationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87C0EF2D95946900BF7EDA /* MorningPreparationView.swift */; };
+		BA87C0F22D95965100BF7EDA /* EveningReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87C0F12D95965100BF7EDA /* EveningReflectionView.swift */; };
+		BA8F1AF02CBAF4DE00BBF210 /* JournalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F1AEF2CBAF4DE00BBF210 /* JournalEditView.swift */; };
+		BA8F1AF22CBB003000BBF210 /* ProtectYourDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F1AF12CBB003000BBF210 /* ProtectYourDataView.swift */; };
+		BA8F1AF52CBB094800BBF210 /* JournalLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F1AF42CBB094800BBF210 /* JournalLock.swift */; };
+		BA8F1AF72CBB09DB00BBF210 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F1AF62CBB09DB00BBF210 /* LockView.swift */; };
+		BA8F1AF92CBB3B2100BBF210 /* InsightsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F1AF82CBB3B2100BBF210 /* InsightsSheetView.swift */; };
+		BA9F4F132D77E83B00C3900C /* RestructuredThought.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F4F122D77E83B00C3900C /* RestructuredThought.swift */; };
+		BA9F4F152D77E8CA00C3900C /* Affirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F4F142D77E8CA00C3900C /* Affirmation.swift */; };
+		BAA1C1A82D8A195100AA0ADD /* CaptureTheMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA1C1A72D8A195100AA0ADD /* CaptureTheMomentView.swift */; };
+		BAB7B74A2CB9DDE900F2E2C5 /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7B7492CB9DDE900F2E2C5 /* JournalManager.swift */; };
+		BAB7B7512CB9F14100F2E2C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB7B74F2CB9F14100F2E2C5 /* ContentView.swift */; };
+		BAC126212D440B7F001354DB /* DisplayedEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC126202D440B7F001354DB /* DisplayedEntriesView.swift */; };
+		BAD1E67A2D4EEE3D00F0BBE1 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1E6792D4EEE3D00F0BBE1 /* Goal.swift */; };
+		BAD1E67C2D4EF06400F0BBE1 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1E67B2D4EF06400F0BBE1 /* GoalManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66BD706E2F3151810090D50A /* HabitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRowView.swift; sourceTree = "<group>"; };
+		BA0579D92D94664C00D028ED /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		BA0579DB2D94670A00D028ED /* LoadCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCoreData.swift; sourceTree = "<group>"; };
+		BA0579E12D946CF500D028ED /* AddNewDailyCheckoffItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDailyCheckoffItemView.swift; sourceTree = "<group>"; };
+		BA0BD7292D9C83C40093F43B /* StartupTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupTutorialView.swift; sourceTree = "<group>"; };
+		BA0BD72C2D9CBD640093F43B /* startupTutorialDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startupTutorialDone.swift; sourceTree = "<group>"; };
+		BA0BFCD12D96F97A0046B7BF /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
+		BA16DB582CBA3C3B009B023B /* Celinea-nRGpO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Celinea-nRGpO.otf"; sourceTree = "<group>"; };
+		BA16DB5A2CBA3C86009B023B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA2197B12D6911DF006550B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BA2197B32D694E1F006550B7 /* PickEntryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickEntryTypeView.swift; sourceTree = "<group>"; };
+		BA2197BB2D6A47B5006550B7 /* MoodCheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCheckInView.swift; sourceTree = "<group>"; };
+		BA2197BD2D6A625C006550B7 /* GratitudeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeEntryView.swift; sourceTree = "<group>"; };
+		BA2197BF2D6A6518006550B7 /* GoalTrackingEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTrackingEntryView.swift; sourceTree = "<group>"; };
+		BA30F7AA2D938CA300BF4F4E /* DailiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailiesView.swift; sourceTree = "<group>"; };
+		BA6E6B3B2CB9B28A007C0EFF /* Jotalyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jotalyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6E6B3E2CB9B28A007C0EFF /* JotalyzeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JotalyzeApp.swift; sourceTree = "<group>"; };
+		BA6E6B422CB9B28D007C0EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA6E6B452CB9B28D007C0EFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA6E6B4E2CB9DBD3007C0EFF /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		BA81F6782D8E6DAC005B4048 /* TestNewViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNewViews.swift; sourceTree = "<group>"; };
+		BA87C0EF2D95946900BF7EDA /* MorningPreparationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPreparationView.swift; sourceTree = "<group>"; };
+		BA87C0F12D95965100BF7EDA /* EveningReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningReflectionView.swift; sourceTree = "<group>"; };
+		BA8F1AEF2CBAF4DE00BBF210 /* JournalEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEditView.swift; sourceTree = "<group>"; };
+		BA8F1AF12CBB003000BBF210 /* ProtectYourDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectYourDataView.swift; sourceTree = "<group>"; };
+		BA8F1AF42CBB094800BBF210 /* JournalLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalLock.swift; sourceTree = "<group>"; };
+		BA8F1AF62CBB09DB00BBF210 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		BA8F1AF82CBB3B2100BBF210 /* InsightsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsSheetView.swift; sourceTree = "<group>"; };
+		BA9F4F122D77E83B00C3900C /* RestructuredThought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestructuredThought.swift; sourceTree = "<group>"; };
+		BA9F4F142D77E8CA00C3900C /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
+		BAA1C1A72D8A195100AA0ADD /* CaptureTheMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTheMomentView.swift; sourceTree = "<group>"; };
+		BAB7B7492CB9DDE900F2E2C5 /* JournalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
+		BAB7B74F2CB9F14100F2E2C5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BAC126202D440B7F001354DB /* DisplayedEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedEntriesView.swift; sourceTree = "<group>"; };
+		BAD1E6792D4EEE3D00F0BBE1 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		BAD1E67B2D4EF06400F0BBE1 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA6E6B382CB9B28A007C0EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA0B1F362CBC2C6700B3F590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA0BD72B2D9C84A80093F43B /* TutorialViews */ = {
+			isa = PBXGroup;
+			children = (
+				BA0BD7292D9C83C40093F43B /* StartupTutorialView.swift */,
+			);
+			path = TutorialViews;
+			sourceTree = "<group>";
+		};
+		BA6E6B322CB9B28A007C0EFF = {
+			isa = PBXGroup;
+			children = (
+				BA6E6B3E2CB9B28A007C0EFF /* JotalyzeApp.swift */,
+				BA6E6B3D2CB9B28A007C0EFF /* Jotalyze */,
+				BA6E6B3C2CB9B28A007C0EFF /* Products */,
+				BA0B1F362CBC2C6700B3F590 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA6E6B3C2CB9B28A007C0EFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA6E6B3B2CB9B28A007C0EFF /* Jotalyze.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA6E6B3D2CB9B28A007C0EFF /* Jotalyze */ = {
+			isa = PBXGroup;
+			children = (
+				BA16DB5A2CBA3C86009B023B /* Info.plist */,
+				BAB7B74D2CB9F11A00F2E2C5 /* Views */,
+				BA6E6B522CB9DCA6007C0EFF /* Model */,
+				BA6E6B422CB9B28D007C0EFF /* Assets.xcassets */,
+				BA16DB582CBA3C3B009B023B /* Celinea-nRGpO.otf */,
+				BA6E6B442CB9B28D007C0EFF /* Preview Content */,
+			);
+			path = Jotalyze;
+			sourceTree = "<group>";
+		};
+		BA6E6B442CB9B28D007C0EFF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA6E6B452CB9B28D007C0EFF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA6E6B522CB9DCA6007C0EFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA0579D82D94664C00D028ED /* CoreData.xcdatamodeld */,
+				BA0BD72C2D9CBD640093F43B /* startupTutorialDone.swift */,
+				BA0579DB2D94670A00D028ED /* LoadCoreData.swift */,
+				BAD1E6792D4EEE3D00F0BBE1 /* Goal.swift */,
+				BAD1E67B2D4EF06400F0BBE1 /* GoalManager.swift */,
+				BA6E6B4E2CB9DBD3007C0EFF /* JournalEntry.swift */,
+				BAB7B7492CB9DDE900F2E2C5 /* JournalManager.swift */,
+				BA9F4F122D77E83B00C3900C /* RestructuredThought.swift */,
+				BA9F4F142D77E8CA00C3900C /* Affirmation.swift */,
+				BA8F1AF42CBB094800BBF210 /* JournalLock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAB7B74D2CB9F11A00F2E2C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BADDE8C92D98F18600F917EE /* MenuButtonViews */,
+				BA0BD72B2D9C84A80093F43B /* TutorialViews */,
+				BA8F1AF62CBB09DB00BBF210 /* LockView.swift */,
+				BA2197B12D6911DF006550B7 /* HomeView.swift */,
+				BAA1C1A72D8A195100AA0ADD /* CaptureTheMomentView.swift */,
+				BA2197BB2D6A47B5006550B7 /* MoodCheckInView.swift */,
+				BA2197BD2D6A625C006550B7 /* GratitudeEntryView.swift */,
+				BA2197BF2D6A6518006550B7 /* GoalTrackingEntryView.swift */,
+				BA2197B32D694E1F006550B7 /* PickEntryTypeView.swift */,
+				BAB7B74F2CB9F14100F2E2C5 /* ContentView.swift */,
+				BA30F7AA2D938CA300BF4F4E /* DailiesView.swift */,
+				66BD706E2F3151810090D50A /* HabitRowView.swift */,
+				BA87C0EF2D95946900BF7EDA /* MorningPreparationView.swift */,
+				BA87C0F12D95965100BF7EDA /* EveningReflectionView.swift */,
+				BA0579E12D946CF500D028ED /* AddNewDailyCheckoffItemView.swift */,
+				BA81F6782D8E6DAC005B4048 /* TestNewViews.swift */,
+				BAC126202D440B7F001354DB /* DisplayedEntriesView.swift */,
+				BA8F1AF82CBB3B2100BBF210 /* InsightsSheetView.swift */,
+				BA8F1AEF2CBAF4DE00BBF210 /* JournalEditView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BADDE8C92D98F18600F917EE /* MenuButtonViews */ = {
+			isa = PBXGroup;
+			children = (
+				BA0BFCD12D96F97A0046B7BF /* LocalNotificationsView.swift */,
+				BA8F1AF12CBB003000BBF210 /* ProtectYourDataView.swift */,
+			);
+			path = MenuButtonViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA6E6B3A2CB9B28A007C0EFF /* Jotalyze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA6E6B492CB9B28D007C0EFF /* Build configuration list for PBXNativeTarget "Jotalyze" */;
+			buildPhases = (
+				BA6E6B372CB9B28A007C0EFF /* Sources */,
+				BA6E6B382CB9B28A007C0EFF /* Frameworks */,
+				BA6E6B392CB9B28A007C0EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jotalyze;
+			packageProductDependencies = (
+			);
+			productName = Jotalyze;
+			productReference = BA6E6B3B2CB9B28A007C0EFF /* Jotalyze.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA6E6B332CB9B28A007C0EFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					BA6E6B3A2CB9B28A007C0EFF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = BA6E6B362CB9B28A007C0EFF /* Build configuration list for PBXProject "Jotalyze" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA6E6B322CB9B28A007C0EFF;
+			packageReferences = (
+			);
+			productRefGroup = BA6E6B3C2CB9B28A007C0EFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA6E6B3A2CB9B28A007C0EFF /* Jotalyze */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA6E6B392CB9B28A007C0EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA16DB592CBA3C3B009B023B /* Celinea-nRGpO.otf in Resources */,
+				BA6E6B462CB9B28D007C0EFF /* Preview Assets.xcassets in Resources */,
+				BA6E6B432CB9B28D007C0EFF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA6E6B372CB9B28A007C0EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BD706F2F3151810090D50A /* HabitRowView.swift in Sources */,
+				BAD1E67A2D4EEE3D00F0BBE1 /* Goal.swift in Sources */,
+				BA8F1AF52CBB094800BBF210 /* JournalLock.swift in Sources */,
+				BA0BD72A2D9C83C40093F43B /* StartupTutorialView.swift in Sources */,
+				BAA1C1A82D8A195100AA0ADD /* CaptureTheMomentView.swift in Sources */,
+				BAB7B74A2CB9DDE900F2E2C5 /* JournalManager.swift in Sources */,
+				BA8F1AF22CBB003000BBF210 /* ProtectYourDataView.swift in Sources */,
+				BA81F6792D8E6DAC005B4048 /* TestNewViews.swift in Sources */,
+				BAB7B7512CB9F14100F2E2C5 /* ContentView.swift in Sources */,
+				BA9F4F132D77E83B00C3900C /* RestructuredThought.swift in Sources */,
+				BA0BFCD22D96F97A0046B7BF /* LocalNotificationsView.swift in Sources */,
+				BA30F7AB2D938CA300BF4F4E /* DailiesView.swift in Sources */,
+				BA0579E22D946CF500D028ED /* AddNewDailyCheckoffItemView.swift in Sources */,
+				BA0579DC2D94670A00D028ED /* LoadCoreData.swift in Sources */,
+				BA87C0F22D95965100BF7EDA /* EveningReflectionView.swift in Sources */,
+				BA0BD72D2D9CBD640093F43B /* startupTutorialDone.swift in Sources */,
+				BA2197BC2D6A47B5006550B7 /* MoodCheckInView.swift in Sources */,
+				BA8F1AF72CBB09DB00BBF210 /* LockView.swift in Sources */,
+				BA2197B42D694E1F006550B7 /* PickEntryTypeView.swift in Sources */,
+				BAD1E67C2D4EF06400F0BBE1 /* GoalManager.swift in Sources */,
+				BA2197BE2D6A625C006550B7 /* GratitudeEntryView.swift in Sources */,
+				BA2197C02D6A6518006550B7 /* GoalTrackingEntryView.swift in Sources */,
+				BA6E6B4F2CB9DBD3007C0EFF /* JournalEntry.swift in Sources */,
+				BA8F1AF02CBAF4DE00BBF210 /* JournalEditView.swift in Sources */,
+				BA0579DA2D94664C00D028ED /* CoreData.xcdatamodeld in Sources */,
+				BA6E6B3F2CB9B28A007C0EFF /* JotalyzeApp.swift in Sources */,
+				BA9F4F152D77E8CA00C3900C /* Affirmation.swift in Sources */,
+				BA2197B22D6911DF006550B7 /* HomeView.swift in Sources */,
+				BA8F1AF92CBB3B2100BBF210 /* InsightsSheetView.swift in Sources */,
+				BA87C0F02D95946900BF7EDA /* MorningPreparationView.swift in Sources */,
+				BAC126212D440B7F001354DB /* DisplayedEntriesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA6E6B472CB9B28D007C0EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 52R8C57Y3B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA6E6B482CB9B28D007C0EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 52R8C57Y3B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA6E6B4A2CB9B28D007C0EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Jotalyze/Jotalyze.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_ASSET_PATHS = "\"Jotalyze/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jotalyze/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to capture photos for your personal entries. Your photos remain private and stay on your device.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate using Face ID, Touch ID, or passcode.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library so you can upload photos to your journal. Your photos remain private and stay on your device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AdamHeidmann.Jotalyze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA6E6B4B2CB9B28D007C0EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Jotalyze/Jotalyze.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_ASSET_PATHS = "\"Jotalyze/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jotalyze/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to capture photos for your personal entries. Your photos remain private and stay on your device.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate using Face ID, Touch ID, or passcode.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library so you can upload photos to your journal. Your photos remain private and stay on your device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AdamHeidmann.Jotalyze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA6E6B362CB9B28A007C0EFF /* Build configuration list for PBXProject "Jotalyze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA6E6B472CB9B28D007C0EFF /* Debug */,
+				BA6E6B482CB9B28D007C0EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA6E6B492CB9B28D007C0EFF /* Build configuration list for PBXNativeTarget "Jotalyze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA6E6B4A2CB9B28D007C0EFF /* Debug */,
+				BA6E6B4B2CB9B28D007C0EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA0579D82D94664C00D028ED /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA0579D92D94664C00D028ED /* CoreData.xcdatamodel */,
+			);
+			currentVersion = BA0579D92D94664C00D028ED /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BA6E6B332CB9B28A007C0EFF /* Project object */;
+}

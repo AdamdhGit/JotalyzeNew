@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D70" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DailyCheckoffItem" representedClassName="DailyCheckoffItem" syncable="YES" codeGenerationType="class">
+        <attribute name="fridayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="fridayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mondayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mondayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="saturdayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="saturdayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sundayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sundayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="thursdayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="thursdayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tuesdayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tuesdayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wednesdayDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wednesdayExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>
