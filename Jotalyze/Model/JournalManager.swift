@@ -111,6 +111,7 @@ import UIKit
             
             await MainActor.run {
                 self.journalEntries = entries
+                self.loadingImageCount = entries.count
                 self.isLoadingEntries = false
             }
             

@@ -343,6 +343,7 @@ struct DisplayedEntriesView: View {
                                             .frame(maxHeight: 300)
                                             .padding(.trailing, 40)
                                             .padding(.vertical)
+                                        
                                         Spacer()
                                     }
                                 }

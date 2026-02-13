@@ -19,35 +19,18 @@ struct LockView: View {
     
     @State var journalManager = JournalManager.shared
     
+    @AppStorage("NewUserFirstLaunch") var newUserFirstLaunch: Bool = true
+    
+    
     var body: some View {
         
-        VStack {
+    VStack {
             
             if showContentView || !journalLock.isLocked || (journalLock.isLocked && journalLock.justSet) {
                 //successfully unlocked, or unlocked, show content view
-                if !journalManager.isLoadingEntries && !journalManager.isLoadingImages {
-                    HomeView()
-                } else {
-                    VStack {
-                        Image(colorScheme == .dark ? "appIconImageWhite" : "appIconImage") // Your logo
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 50, height: 50)
-                                    Text("Jotalyze")
-                                        .font(.title3)
-                                        .fontWeight(.semibold)
-                        
-                        Spacer()
-                    }.padding(.top, 250)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .background(Color(.systemBackground))
-                                .onAppear {
-                                    // Load entries while splash shows
-                                    Task {
-                                        await journalManager.refreshEntries()
-                                    }
-                                }
-                }
+                
+              HomeView()
+                
             } else {
                 //hasn't been unlocked but required to unlock
                 
@@ -80,7 +63,8 @@ struct LockView: View {
                     }.padding(.top, 50)
                 }
             }
-        }.onAppear{
+        }
+        .onAppear{
             if journalLock.isLocked {
                 authenticateWithBiometrics { success, error in
                     if success {

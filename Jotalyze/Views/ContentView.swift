@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //@State private var isLoading = true
+    @State private var isLoading = true
     
     @Environment(\.colorScheme) var colorScheme
     @State var journalManager:JournalManager
@@ -47,12 +47,10 @@ struct ContentView: View {
                         
                         
                         //entries
-                        /*
+                        
                         if isLoading {
-                            ProgressView("Loading...")
-                        } else
-                        */
-                        if journalManager.journalEntries.isEmpty {
+                            //ProgressView("Loading...")
+                        } else if journalManager.journalEntries.isEmpty {
                             emptyJournalView
                         } else {
                             
@@ -173,10 +171,9 @@ struct ContentView: View {
                                             
                                         }
                                         
-                                        
-                                        
+
                                         //MARK: display all journal entries
-                                        VStack {
+                                        LazyVStack {
                                             
                                             //all journal entries filtered by day selected.
                                             let selectedDayEntries = journalManager.journalEntries.filter{entry in
@@ -330,10 +327,10 @@ struct ContentView: View {
             }
             .onAppear {
                 Task{
-                    //await journalManager.refreshEntries()
+                    await journalManager.refreshEntries()
                     //moved to @main for the entries call onAppear
                     
-                    //isLoading = false
+                    isLoading = false
                 }
                 //journalManager.getAllJournalEntries()
                 

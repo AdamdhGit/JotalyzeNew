@@ -23,6 +23,8 @@ struct JournalThumbnailView: View {
         .padding(.trailing, 40)
         .padding(.vertical)
     */
+    
+    @State private var loaded = false
 
     var body: some View {
         Group {
@@ -34,16 +36,22 @@ struct JournalThumbnailView: View {
                         .resizable()
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 12))
-                } else {
-                    // small placeholder
-                    Image(systemName: "photo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 60, height: 60)
-                        .foregroundColor(.gray)
-                        .opacity(0.5)
+                        .opacity(loaded ? 1 : 0) // start invisible
+                                            .onAppear {
+                                                withAnimation(.easeInOut(duration: 0.5)) {
+                                                    loaded = true
+                                                }
+                                            }
+                    
+                    
+                    
                 }
-            
+            /*
+            else {
+                  //placeholder image here if want or ProgressView() but i don't need because LazyVStack loads 1-2 at a time and its immediate. alraedy appearing as it hits the screen.
+                    
+                }
+            */
             
         }
         .onAppear {
@@ -96,10 +104,10 @@ struct JournalThumbnailView: View {
         DispatchQueue.global(qos: .userInitiated).async {
             
             defer {
-                    DispatchQueue.main.async {
-                        JournalManager.shared.loadingImageCount -= 1
-                    }
+                DispatchQueue.main.async {
+                    JournalManager.shared.loadingImageCount -= 1
                 }
+            }
             
             guard let fileURL = JournalManager.shared.getImageURL(from: entry.thumbnailPath ?? entry.imagePath) else {
                 return
