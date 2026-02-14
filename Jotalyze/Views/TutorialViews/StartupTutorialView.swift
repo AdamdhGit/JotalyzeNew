@@ -60,12 +60,12 @@ struct StartupTutorialView: View {
                 ZStack{
                     
                     VStack{
-                        Image("moodPic")
+                        Image(colorScheme == .dark ? "moodPicDarkMode" : "moodPicLightMode")
                             .resizable()
-                            .renderingMode(.template)
+                            //.renderingMode(.template)
                             .scaledToFit()
                             .frame(width: 300, height: 300).padding(.top, 80)
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                            //.foregroundColor(colorScheme == .dark ? .white : .black)
                         Text("Optimize Your Mood").bold().padding(.top, 10)
                         Text("Track your mood with Mood Check-In entries. Receive analytics comparing mood trends over time through different graphs.").padding(.top, 10).fontWeight(.light).multilineTextAlignment(.center)
                         
@@ -150,40 +150,6 @@ struct StartupTutorialView: View {
                     }
                 }.tag(3).padding(.horizontal)
                 
-                ZStack{
-              
-                    VStack{
-                        
-                        Image(colorScheme == .dark ? "chartsPicDarkMode" : "chartsPicLightMode")
-                            .resizable()
-                            .renderingMode(.template)
-                            .scaledToFit()
-                            .frame(width: 300, height: 300).padding(.top, 80)
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                        
-                        Text("Gain Insights").padding(.top, 10).bold()
-                        Text("Chart your journey, uncover mood patterns, dive into rich analytics, and visualize your progress as you achieve your goals.").padding(.top, 10).fontWeight(.light).multilineTextAlignment(.center)
-                        
-                        Spacer()
-                        
-                        
-                        
-                    }
-                    
-                    VStack{
-                        Spacer()
-                        Button{
-                            withAnimation{
-                                tutorialTabSelected = 5
-                            }
-                        }label:{
-                            Text("Next").padding(10).padding(.horizontal, 20)
-                                .foregroundStyle(colorScheme == .dark ? .black : .white)
-                            
-                        }.buttonStyle(.borderedProminent).tint(colorScheme == .dark ? .white : .black).padding(.bottom, 100)
-                    }
-                }.tag(4).padding(.horizontal)
-                
          
                 ZStack{
                     
@@ -209,7 +175,7 @@ struct StartupTutorialView: View {
                         VStack{
                             Button{
                                 withAnimation{
-                                    tutorialTabSelected = 6
+                                    tutorialTabSelected = 5
                                 }
                             }label:{
                                 Text("Next").padding(10).padding(.horizontal, 20)
@@ -219,75 +185,103 @@ struct StartupTutorialView: View {
                         }
                     }
                     
-                }.tag(5).padding(.horizontal)
+                }.tag(4).padding(.horizontal)
                 
        
-                ZStack{
-                    
-                    
-                    
-                    ScrollView {
-                        Image(systemName: "rectangle.fill.on.rectangle.fill").padding(.top, 20).font(.title)
-                        Text("6 Journal Styles").padding(.top, 10).bold()
-                        
-                        
-                        
-                        VStack{
-                            Text("Morning Preparation").padding(.bottom, 3)
-                            Text("Set positive intentions for the day.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                            Divider().padding(.vertical, 4)
-                            
-                            Text("Evening Reflection").padding(.bottom, 3)
-                            Text("Reflect on your days intentions.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                            Divider().padding(.vertical, 4)
-                            
-                            Text("Mood Check-In").padding(.bottom, 3)
-                            Text("Track your mood and receive valuable analytics.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                            Divider().padding(.vertical, 4)
-                            
-                            Text("Gratitude").padding(.bottom, 3)
-                            Text("Note what you're thankful for.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                            
-                            Divider().padding(.vertical, 4)
-                            
-                            Text("Goal Tracking").padding(.bottom, 3)
-                            Text("Track your goals with clear visual progress.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                            Divider().padding(.vertical, 4)
-                            
-                            Text("Capture the Moment").padding(.bottom, 3)
-                            Text("Reflect on meaningful experiences.").fontWeight(.light).multilineTextAlignment(.center).opacity(0.75)
-                            
-                        }.padding().overlay{
-                            RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 0.5).foregroundStyle(.gray)
-                        }.scaleEffect(0.9)
-                        Spacer().frame(height: 150)
-                    }.padding().scrollIndicators(.hidden)
-                    
-                    VStack{
-                        Spacer()
-                        ZStack{
-                            Rectangle().foregroundStyle(colorScheme == .light ? Color.white : Color.black).frame(height: 160)
-                            Rectangle().foregroundStyle(Color.gray.opacity(0.1)).frame(height: 160)
+                ZStack {
+
+                    VStack {
+
+                        ScrollView {
+                            VStack {
+
+                                Image(systemName: "rectangle.fill.on.rectangle.fill")
+                                    .font(.title)
+                                    .padding(.top, 80)
+
+                                Text("6 Unique Journal Styles")
+                                    .padding(.top, 10)
+                                    .bold()
+
+                                VStack(spacing: 24) {
+
+                                    journalItem(
+                                        title: "Morning Preparation",
+                                        description: "Set positive intentions for the day."
+                                    )
+
+                                    journalItem(
+                                        title: "Evening Reflection",
+                                        description: "Reflect on your day’s intentions."
+                                    )
+
+                                    journalItem(
+                                        title: "Mood Check-In",
+                                        description: "Track your mood and receive valuable analytics."
+                                    )
+
+                                    journalItem(
+                                        title: "Gratitude",
+                                        description: "Note what you're thankful for."
+                                    )
+
+                                    journalItem(
+                                        title: "Goal Tracking",
+                                        description: "Track your goals with clear visual progress."
+                                    )
+
+                                    journalItem(
+                                        title: "Capture the Moment",
+                                        description: "Reflect on meaningful experiences."
+                                    )
+                                }
+                                .padding(.top, 20)
+                                .scaleEffect(0.95)
+
+                                Spacer()
+                                    .frame(height: 180) // space for button
+
+                            }
                         }
+                        .scrollIndicators(.hidden)
+                        .mask(
+                            LinearGradient(
+                                stops: [
+                                    .init(color: .black, location: 0.0),
+                                    .init(color: .black, location: 0.9),
+                                    .init(color: .clear, location: 1.0)
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                            
+                        )
+                        .padding(.bottom, 160)
+
                     }
-                    
-                    VStack{
+
+                    VStack {
                         Spacer()
-                        Button{
-                            withAnimation{
+
+                        Button {
+                            withAnimation {
                                 startupTutorialDone.tutorialIsDone = true
                             }
-                        }label:{
-                            Text("Start Journaling").padding(10).padding(.horizontal, 20)
-                        }.buttonStyle(.borderedProminent).tint(.black).padding(.bottom, 100)
+                        } label: {
+                            Text("Start Journaling")
+                                .padding(10)
+                                .padding(.horizontal, 20)
+                                .foregroundStyle(colorScheme == .dark ? .black : .white)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(colorScheme == .dark ? .white : .black)
+                        .padding(.bottom, 100)
                     }
-                    
-                }.tag(6).padding(.horizontal)
+
+                }
+                .tag(5)
+                .padding(.horizontal)
+
                 
             }
             .tabViewStyle(PageTabViewStyle())
@@ -296,7 +290,49 @@ struct StartupTutorialView: View {
                        UIPageControl.appearance().pageIndicatorTintColor = UIColor(.secondary)
             }
         }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                withAnimation {
+                    startupTutorialDone.tutorialIsDone = true
+                }
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.system(size: 14, weight: .semibold))
+                    .padding(15)
+                    .background(.ultraThinMaterial)
+                    .clipShape(Circle())
+            }
+            .frame(width: 50, height: 50) // 👈 bigger invisible hitbox
+               .contentShape(Circle())    // 👈 entire frame tappable
+            .buttonStyle(.plain)
+            .tint(colorScheme == .dark ? .white : .black)
+            .padding(.top, 20)
+            .padding(.trailing, 20)
+        }
     }
+    
+    @ViewBuilder
+    func journalItem(title: String, description: String) -> some View {
+        VStack(spacing: 6) {
+            Text(title)
+                .font(.headline)
+
+            Text(description)
+                .font(.subheadline)
+                .fontWeight(.light)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 14)
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 18)
+                .fill(colorScheme == .dark
+                      ? Color.white.opacity(0.05)
+                      : Color.black.opacity(0.03))
+        )
+    }
+    
 }
 
 #Preview {
