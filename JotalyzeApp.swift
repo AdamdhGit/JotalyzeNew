@@ -16,6 +16,15 @@ struct JotalyzeApp: App {
     @StateObject var loadCoreData = LoadCoreData()
     @StateObject var startupTutorialDone = StartupTutorialDone()
     
+    @AppStorage("isExistingUser") var isExistingUser: Bool = false
+    
+    init() {
+           // ONLY pre-premium release:
+           if !isExistingUser {
+               isExistingUser = true // mark existing users
+           }
+       }
+    
     var body: some Scene {
         WindowGroup {
             
@@ -23,7 +32,7 @@ struct JotalyzeApp: App {
                 StartupTutorialView().environmentObject(startupTutorialDone)
             } else {
                 LockView()
-                    .environmentObject(StartupTutorialDone())
+                    .environmentObject(startupTutorialDone)
                     .environmentObject(journalLock)
                     .environment(\.managedObjectContext, loadCoreData.container.viewContext)
                     
